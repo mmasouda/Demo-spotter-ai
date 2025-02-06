@@ -204,7 +204,7 @@ export const SearchBar = () => {
                 </Form>
                 <Btn
                     disabled={origin == undefined || destination == undefined || date == undefined}
-                    onClick={() => router.push("/search", { query: { origin: JSON.stringify(origin), destination: JSON.stringify(destination), date: JSON.stringify(date) } })}>
+                    onClick={() => router.push(`/search?origin=${JSON.stringify(origin)}&destination=${JSON.stringify(destination)}&date=${JSON.stringify(date)}`)}>
                     <SearchIcon />
                     Search
                 </Btn>
